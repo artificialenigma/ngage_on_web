@@ -1,0 +1,19 @@
+[package]
+name = "cotd_core"
+version = "0.1.0"
+edition = "2021"
+description = "ARMv5TE + Thumb-1 interpreter for running COTD.exe (native for testing, wasm32 for the browser)"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+debug = false
+
+[dependencies]
+jpeg-decoder = { version = "0.3", default-features = false }
+png = { version = "0.17", default-features = false }

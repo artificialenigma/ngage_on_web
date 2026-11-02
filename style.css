@@ -1,0 +1,107 @@
+:root {
+  --bg: #0b1418;
+  --panel: #13222a;
+  --text: #d8e6ea;
+  --muted: #7f99a3;
+  --accent: #f08a24;
+  --key: #1d3440;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 100%;
+  max-width: 980px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+#screen {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  aspect-ratio: 4 / 3;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px #263c46, 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+#screen.portrait {                       /* portrait games: 240x320 */
+  aspect-ratio: 3 / 4;
+  max-width: 540px;
+}
+
+#lcd {
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  display: block;
+}
+
+#start {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(3, 10, 14, 0.82);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+#start[disabled] { cursor: progress; }
+#start .big { font-size: 28px; font-weight: 600; color: var(--accent); }
+#start .small { color: var(--muted); }
+#start.hidden { display: none; }
+#picker { color: var(--muted); }
+#picker select { font: inherit; margin-left: 6px; }
+
+#softkeys {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#softkeys button {
+  background: var(--key);
+  color: var(--text);
+  border: 1px solid #2c4d5c;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+#softkeys button:active { background: #28495a; }
+
+kbd {
+  font: 12px ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: var(--panel);
+  border: 1px solid #2c4d5c;
+  border-radius: 4px;
+  padding: 0 5px;
+  margin: 0 1px;
+}
+
+#help, #status { margin: 0; color: var(--muted); text-align: center; }
+#status { font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; min-height: 18px; }

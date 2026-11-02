@@ -1,0 +1,3 @@
+[target.wasm32-unknown-unknown]
+# The JIT adds compiled blocks to the function table at runtime.
+rustflags = ["-C", "link-arg=--export-table", "-C", "link-arg=--growable-table"]

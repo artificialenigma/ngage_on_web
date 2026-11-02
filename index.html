@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>N-Gage Player</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <label id="picker" hidden>Game <select id="game"></select></label>
+  <div id="screen">
+    <canvas id="lcd" width="320" height="240"></canvas>
+    <button id="start" type="button">
+      <span class="big">Start</span>
+      <span class="small" id="load-status">Loading game files…</span>
+    </button>
+  </div>
+  <div id="softkeys">
+    <button type="button" data-key="lsk">Left soft key <kbd>Q</kbd></button>
+    <button type="button" data-key="ok">OK <kbd>Enter</kbd></button>
+    <button type="button" data-key="rsk">Right soft key <kbd>E</kbd></button>
+  </div>
+  <p id="help">
+    <kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> move · <kbd>Enter</kbd>/<kbd>Space</kbd> OK ·
+    <kbd>Q</kbd> left soft key · <kbd>E</kbd>/<kbd>Esc</kbd> right soft key · <kbd>Backspace</kbd> clear ·
+    <kbd>0</kbd>–<kbd>9</kbd> number keys
+  </p>
+  <p id="status"></p>
+</main>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

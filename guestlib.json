@@ -1,0 +1,17 @@
+{
+ "__aeabi_idivmod": 92,
+ "__aeabi_memclr": 288,
+ "__aeabi_memclr4": 288,
+ "__aeabi_memcpy": 196,
+ "__aeabi_memcpy4": 196,
+ "__aeabi_memmove": 148,
+ "__aeabi_memmove4": 148,
+ "__aeabi_memset": 292,
+ "__aeabi_uidivmod": 0,
+ "__aeabi_vec_ctor_nocookie_nodtor": 424,
+ "__aeabi_vec_dtor_cookie": 496,
+ "__cxa_vec_ctor": 364,
+ "__cxa_vec_dtor": 440,
+ "__cxa_vec_new2": 540,
+ "qsort": 636
+}
